@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACCESO-U</title>
+  <link rel="shortcut icon" href="https://img.freepik.com/vector-premium/icono-flechas-estilo-color-plano_755164-467.jpg">
+  <!-- css-links -->
+  <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+  {% extends "/auth/layout.html" %}
+  {% block content %}
+
+  <!-- LOGIN -->
+  <main class="container-fluid h-custom" style="padding-bottom:30px">
+
+    <section class="row d-flex justify-content-center align-items-center h-100">
+      <article class="col-md-9 col-lg-6 col-xl-5">
+        <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image"> -->
+          <img src="https://www.giftit.me/assets/images/login-image.png" class="img-fluid"
+          alt="Sample image" style="padding-left: 20%;width: 70%; display: flex; justify-items: right; align-items: right ;"> 
+          <!-- <img src="https://www.bbva.ch/wp-content/uploads/2022/09/Biometria-Blog-1300x400-1.gif" class="img-fluid"
+          alt="Sample image" style="border-radius: 40px ;"> -->
+
+      </article>
+      <aside class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form action="/login" method="POST">
+
+          <div class="divider d-flex align-items-center my-4">
+            <h3 class="text-center fw-bold mx-3 mb-0" style="color: blue;">INICIA SESIÓN</h3>
+
+
+          </div>
+
+          <!-- Matricula input -->
+          <div class="form-outline mb-4">
+            <input type="text" name="matricula" id="matricula" class="form-control form-control-lg"
+              placeholder="DIGITAR MATRICULA" required autofocus />
+            <label class="form-label" for="matricula"> Matricula</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" name="password" id="in-pass" class="form-control form-control-lg"
+              placeholder="INGRESAR CONTRASEÑA" required />
+            <label class="form-label" for="in-pass"> Password</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Recordar
+              </label>
+            </div>
+            <a href="#!" class="text-body">Olvidaste tu contraseña?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <!-- submit-button -->
+            <button type="submit" class="btn btn-primary btn-lg" id="b-log">LOGIN</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Aún no tienes cuenta?
+              <a href="{{ url_for('signin') }}" class="link-danger" id="link-reg">Registrate aquí</a>
+            </p>
+          </div>
+
+        </form>
+      </aside>
+    </section>
+<div>
+  <h4>LINKS TEST:
+    <br>
+    Panel:  
+    <a href="{{ url_for('panel') }}" class="link" id="link-reg">link 1</a>
+    <br>
+    Acceso Admin: 
+    <a href="{{ url_for('sistAdmin') }}" class="link" id="link-reg">link 2</a>
+  </h4>
+</div>
+
+  </main>
+  {% endblock %}
+  <!-- JS-FUNCTIONS -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css-links -->
+    <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <!-- contenido-principal -->
+  <header>
+        <div class="text-dark">
+        <h1  class="display-4" id="h1-lay">SISTEMA DE ACCESO AL PLANTEL</h1>
+        </div> 
+        <div class="p-3 mb-2 bg-primary text-white">
+        <h2 id="h2-lay">Control de sistema</h2>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <rect x="10" y="12" width="4" height="4" />
+          </svg>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Historial <span class="sr-only">(Visitas)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mantenimiento</a>
+            </li>
+            <li class="nav-item" style="padding-left:50px;">
+              <a class="nav-link disabled" href="#">Salir</a>
+              
+            </li>
+            <button><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                <path d="M7 12h14l-3 -3m0 6l3 -3" />
+              </svg></button>
+          </ul>
+        </div>
+      </nav>
+  </header>
+    {% block content %} 
+    <!-- contenido-principal -->
+
+     
+    <!-- bloque-final-footer -->
+    {% endblock %} 
+    <footer id="footer" class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+       <!-- Copyright -->
+        <!--  -->
+         <section class="img-logo-footer" style="display: flex; justify-content: center; align-items: center; padding: 1% 5% 5px 10%;">
+          <img style="width: 30px;" src="https://unidegleon.files.wordpress.com/2020/01/logo-sabes.png" alt="logo-universidad">
+         </section>
+         <div class="text-white mb-3 mb-md-0 d-flex justify-content-center align-items-center">
+          UNIDEG San Felipe TI © 2023. All rights reserved.
+         </div>
+        <!-- Copyright -->
+    <!-- bloque-final-footer -->         
+    </footer>
+</body>
+</html>

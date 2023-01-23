@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <title>ACCESO-U</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/vector-premium/icono-flechas-estilo-color-plano_755164-467.jpg">
+
+    <!-- css-links -->
+    <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    {% extends "/auth/layout.html" %} 
+    {% block content %} 
+            
+    <!-- LOGIN -->
+    <main class="container-fluid h-custom" style="padding-bottom:30px">
+       
+          <section class="row d-flex justify-content-center align-items-center h-100">
+            <article class="col-md-9 col-lg-6 col-xl-5">
+               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image">
+                
+            </article>
+            <aside class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form >
+                           
+                <div class="divider d-flex align-items-center my-4">
+                  <h3 class="text-center fw-bold mx-3 mb-0" style="color: blue;">REGISTRATE</h3>
+
+
+                </div>
+      
+                <!-- Data User-regist -->
+                <div class="form-outline mb-4">
+                   <input type="text" id="matricula" class="form-control form-control-lg"
+                      placeholder="U0003057N0000" required />
+                   <label class="form-label" for="dataUser"><h6 id="h6-s-1">Matricula</h6>  </label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" id="nombre" class="form-control form-control-lg"
+                      placeholder="Escriba su nombre" required />
+                    <label class="form-label" for="dataUser"><h6 id="h6-s-1">Nombre</h6>  </label>
+                  </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" id="apellidoPat" class="form-control form-control-lg"
+                      placeholder="A. Paterno" required/>
+                    <label class="form-label" for="dataUser"><h6 id="h6-s-1">Apellido Paterno</h6> </label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <input type="text" id="apellidoMat" class="form-control form-control-lg"
+                      placeholder="A. Materno" required/>
+                    <label class="form-label" for="dataUser"> <h6 id="h6-s-1">Apellido Materno</h6></label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <h6 id="h6-select">Si eres alumno selecciona tú carrera, de otro modo indica tú rol:</h6>
+                    <select name="Carrera" id="career" required>
+                        
+                        <option value="">Elige una opción</option>
+                        <option>Ing.Tecnologias de Información</option>
+                        <option>Ing.Industrial</option>
+                        <option>Lic. Administración</option>
+                        <option>Lic. Mercadotecnia</option>
+                        <option style="background-color: aqua;">Docente</option>
+                        <option style="background-color: aqua;">Administrativo</option>
+                        <option></option>
+                      </select>
+                </div>
+
+
+
+
+      
+                <!-- Password create -->
+                <div class="form-outline mb-3">
+                  <input type="password" id="in-pass" class="form-control form-control-lg"
+                    placeholder="Crear contraseña" required/>
+                  <label class="form-label" for="dataUser"><h6 id="h6-s-1">Password</h6>  </label>
+                  
+                </div>
+                <!-- Rep-passw -->
+                <div class="form-outline mb-3">
+                    <input type="password" id="rep-pass" class="form-control form-control-lg"
+                      placeholder="Confirma contraseña" required/>
+                    <label class="form-label" for="dataUser"><h6 id="h6-s-1">Repetir Password</h6></label>
+                    
+                  </div>
+      
+                     
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button type="button" class="btn btn-primary btn-lg" id="b-log" >Registrar</button>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">Ya tienes cuenta? <a  href="{{ url_for('login') }}"
+                      class="link-success" id="link-reg">Inicia sesión</a></p>
+                </div>
+      
+              </form>
+            </aside>
+          </section>
+        
+        
+        </main>
+      {% endblock %}
+      <!-- JS-FUNCTIONS -->
+      <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
